@@ -84,6 +84,8 @@ aws ec2 create-key-pair --key-name eks-key --query "KeyMaterial" --output text >
  Example EKS Cluster Configuration
 
 Create a file named eks-cluster.yaml:
+<img width="1600" height="855" alt="image" src="https://github.com/user-attachments/assets/58ebfeae-f7bc-406d-97a1-d1fe0005fc95" />
+
 
 
 **Run:
