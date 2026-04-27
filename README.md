@@ -14,27 +14,27 @@ Download and install AWS CLI v2:
 
 After installation, verify:
 
-aws --version
+#aws --version
 
 Expected output:
 
 aws-cli/2.x.x Python/...
- Install eksctl (EKS CLI Tool)
+Install eksctl (EKS CLI Tool)
 Windows Installation (Chocolatey method)
-choco install eksctl
+#choco install eksctl
 
 OR manual installation:
 Extract and add eksctl.exe to PATH
 
 **Verify installation:**
 
-eksctl version
+#eksctl version
 
 **Configure AWS Credentials**
 
 Run the following command to authenticate your AWS CLI:
 
-aws configure
+#aws configure
 
 **You will be prompted to enter:
 **
@@ -48,7 +48,7 @@ Default output format: json
 
 ** Verify authentication
 **
-aws sts get-caller-identity
+#aws sts get-caller-identity
 
 If successful, you will see your AWS account details.
 
@@ -64,7 +64,7 @@ aws s3 mb s3://my-eks-project-bucket-2026
 
 List buckets:
 
-aws s3 ls
+#aws s3 ls
 
 **Create EC2 Key Pair (Required for EKS Node Access)
 **
@@ -75,12 +75,12 @@ aws ec2 create-key-pair --key-name eks-key --query "KeyMaterial" --output text >
 
 **On Windows (PowerShell):
 **
-icacls eks-key.pem /inheritance:r
-icacls eks-key.pem /grant:r "%USERNAME%:R"
+#icacls eks-key.pem /inheritance:r
+#icacls eks-key.pem /grant:r "%USERNAME%:R"
 
 **On Linux/Mac:
 **
-chmod 400 eks-key.pem
+#chmod 400 eks-key.pem
  Example EKS Cluster Configuration
 
 Create a file named eks-cluster.yaml:
@@ -88,4 +88,4 @@ Create a file named eks-cluster.yaml:
 
 **Run:
 **
-eksctl create cluster -f eks-cluster.yaml
+#eksctl create cluster -f eks-cluster.yaml
