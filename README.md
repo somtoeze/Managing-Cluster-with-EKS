@@ -39,9 +39,13 @@ aws configure
 **You will be prompted to enter:
 **
 AWS Access Key ID: YOUR_ACCESS_KEY
+
 AWS Secret Access Key: YOUR_SECRET_KEY
+
 Default region name: us-east-1
+
 Default output format: json
+
 ** Verify authentication
 **
 aws sts get-caller-identity
