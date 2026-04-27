@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: smart-prod-cluster
+  name: somto-demo
   region: us-east-1
   version: "1.34" 
 
@@ -38,6 +38,7 @@ managedNodeGroups:
     volumeSize: 50
     ssh:
       allow: true # Uses your default SSH key
+      publicKeyName: eks-key
     labels:
       role: worker
     tags:
