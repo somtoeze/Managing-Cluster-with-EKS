@@ -1,3 +1,6 @@
+PROJECT BY EZE SOMTOCHUKWU
+
+
 AWS CLI + EKS Setup Guide
 
 This guide explains how to install and configure AWS CLI, install eksctl, authenticate AWS access, and prepare required AWS resources like S3 buckets and EC2 key pairs for Kubernetes deployments.
