@@ -4,7 +4,6 @@ metadata:
   name: my-service
 
 
-
 spec:
   type: clusterIP
   selector:
