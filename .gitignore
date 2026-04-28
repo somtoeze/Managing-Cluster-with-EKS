@@ -1,3 +1,2 @@
-#key pem
 eks-key.pem
-
+*.pem
