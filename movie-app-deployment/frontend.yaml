@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 3
+
+  selector:
+    matchlabels:
+      app: frontend
+
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend-containers
+          image: nginx:1.25
+          ports:
+            - containers: 3000
