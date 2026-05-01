@@ -1,12 +1,12 @@
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
   name: frontend-deployment
 spec:
   replicas: 3
 
   selector:
-    matchlabels:
+    matchLabels:
       app: frontend
 
   template:
@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - name: frontend-containers
-          image: nginx:1.25
+        - name: frontend-container
+          image: 660119432667.dkr.ecr.us-east-1.amazonaws.com/netflix_frontend:latest
           ports:
-            - containers: 3000
+            - containerPort: 3000

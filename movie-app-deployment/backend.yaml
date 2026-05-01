@@ -1,12 +1,12 @@
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
   name: backend-deployment
 spec:
   replicas: 3
 
   selector:
-    matchlabels:
+    matchLabels:
       app: backend
 
   template:
@@ -15,7 +15,7 @@ spec:
         app: backend
     spec:
       containers:
-        - name: backend-containers
-          image: nginx:1.25
+        - name: backend-container
+          image: 660119432667.dkr.ecr.us-east-1.amazonaws.com/netflix-backend:latest
           ports:
-            - containers: 8080
+            - containerPort: 8080
